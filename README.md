@@ -13,6 +13,7 @@ For this assignment I tried to follow the live product's style however some desc
 ## Some of the things I worked on
 *  Autocomplete UI element with keyboard controls
 *  Logo Animation - A little motion is always a crowd pleaser
+*  Responsive layout
 *  SPA with client side routing
 *  Minimal Dependencies - Only React, React-Router and MaterialUI were used
 
