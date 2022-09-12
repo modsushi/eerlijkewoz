@@ -56,15 +56,20 @@ export default function Search() {
     for (let key in params) {
       url.searchParams.append(key, params[key])
     }
-    const response = await fetch(url);
-    if (response.ok) {
-      const data = await response.json()
-      setState({...state,
-        results:data
-      })
+    try {
+      const response = await fetch(url);
+      if (response.ok) {
+        const data = await response.json()
+        setState({...state,
+          results:data
+        })
+      }
+      else {
+        console.log(response.status)
+      }
     }
-    else {
-      console.log(response.status)
+    catch(error) {
+      console.log(error)
     }
   }
  
