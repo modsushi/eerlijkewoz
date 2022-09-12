@@ -1,0 +1,61 @@
+.autolist {
+  text-align: left;
+  width: 55%;
+  min-width: 250px;
+  max-height: 240px;
+  overflow-y: auto;
+  position: absolute;
+  top: 77%;
+  background: #fff;
+  padding: 5px 0 5px 0px;
+  z-index: 9999;
+}
+.autolist ul{
+  margin: 0;
+  padding:0;
+  z-index: 9999;
+}
+.autolist li{
+  list-style: none;
+  border-bottom:1px solid #f3eded;
+  padding: 0 0 0 20px;
+  color:'#fff';
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  min-height: 60px;
+  font-size: 1rem;
+}
+.autolist li > svg {
+  margin: 0 15px 0 0;
+}
+.autolist li:hover > svg {
+  fill:#fff;
+}
+.autolist li:hover{
+  color:#fff;
+  cursor: pointer;
+  background-color:rgb(56, 131, 252);
+}
+.autolist li.focused {
+  background-color: #000;
+  color: #fff;
+  background-color:rgb(41, 122, 255);
+}
+.search {
+  background-color: #fff;
+  margin-right: 5px;
+  width: 100%;
+}
+.searchwrap {
+  background-color: rgb(249 249 249);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+@media (max-width: 800px) {
+  .autolist {
+    width: 85%;
+  }
+}

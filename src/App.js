@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Topbar from './components/topbar';
+import Welcome from './views/welcome';
+import Address from './views/address';
+import Confirmation from './views/confirmation';
+import Woz from './views/woz';
+import { AddressProvider } from './Context';
+import './styles/App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <AddressProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Welcome/>}/>
+          <Route path='/*' element={
+            <>
+              <Topbar />
+              <Routes>
+                <Route path='address' element={<Address/>}/>
+                <Route path='confirmation' element={<Confirmation/>}/>
+                <Route path='woz' element={<Woz/>}/>
+              </Routes>
+            </>} />
+        </Routes>
+      </BrowserRouter>
+    </AddressProvider>
     </div>
   );
 }

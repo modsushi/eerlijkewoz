@@ -1,0 +1,29 @@
+
+ul.benefits {
+  margin: 20px 0 20px 0;
+  padding: 0;
+}
+
+ul.benefits li {
+  list-style: none;
+  display: flex;
+  -ms-flex-align: center;
+  margin-top:10px;
+}
+ul.benefits li > .count {
+  border-radius: 50%;
+  background-color: #297AFF;
+  color:#fff;
+  width: 24px;
+  text-align: center;
+  margin-right: 20px;
+  font-family: 'Montserrat';
+}
+.modal {
+  background-color: #fff;
+  width: 80%;
+  margin: 15vw auto 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 800px;
+}
